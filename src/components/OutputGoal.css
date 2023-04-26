@@ -1,0 +1,7 @@
+li{
+    list-style-type: disc;
+    background-color: rgb(192, 51, 192);
+    margin: 3vh;
+    padding: 1vh;
+    border-radius: 2px;
+}

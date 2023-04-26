@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.App{
+    flex-direction: column;
+    padding: 2vh;
+}
+.border{
+    border : 1px solid red;
+    padding: 5vw 20vw;
+}
