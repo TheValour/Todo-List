@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Input from './components/Input';
-import Output from './components/Output';
+import Output from './components/output/Output';
 
 function App() {
   const [goals, setGoal] = useState(["hello", "run", "play"]);

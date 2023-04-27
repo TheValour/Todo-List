@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button';
 import styled from 'styled-components';
+import Model from './model/Model';
 
 const FormControl = styled.form`
     width : 100%;
@@ -17,7 +18,7 @@ const FormControl = styled.form`
 export default function Input({inputData}) {
     const [tempGoal, setTempGoal] = useState('');
     const [flag, setFlag] = useState(true);
-
+    
     const submitHandler = (event) =>{
         event.preventDefault();
         if(tempGoal.trim().length === 0){
@@ -34,6 +35,8 @@ export default function Input({inputData}) {
 
   return (
     <div className='border'>
+        {!flag && <Model setFlag = {setFlag}/>}
+
         <FormControl invalid={flag}>
             <label style={{color : flag ? 'black':'red'}}>Course Goal:</label><br/>
             <input 
