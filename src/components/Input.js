@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from './Button';
 import styled from 'styled-components';
 import Model from './model/Model';
+import Wrapper from './helper/Wrapper';
 
 const FormControl = styled.form`
     width : 100%;
@@ -10,6 +11,7 @@ const FormControl = styled.form`
     padding: 4vh;
     
     & input{
+        width : 40vw;
         border : 1px solid black;
         background-color: ${props =>props.invalid ?'transparent' : 'red'};
     }
@@ -33,20 +35,20 @@ export default function Input({inputData}) {
         setTempGoal(event.target.value);
     }
 
-  return (
-    <div className='border'>
+    return (
+    <Wrapper>
         {!flag && <Model setFlag = {setFlag}/>}
 
-        <FormControl invalid={flag}>
+        <FormControl style={{ width: '50vw' }} invalid={flag}>
             <label style={{color : flag ? 'black':'red'}}>Course Goal:</label><br/>
             <input 
-                className= {`inputField  ${flag ?'':'invalid'}`}
+                className= {`${flag ?'':'invalid'}`}
                 type='text'
                 value={tempGoal}
                 onChange={changeHandler}
             /><br/><br/>
             <Button onClick={submitHandler}>Add Goal</Button>
         </FormControl>
-    </div>
+    </Wrapper>
   )
 }

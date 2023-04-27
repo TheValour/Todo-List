@@ -3,9 +3,11 @@ import styled from 'styled-components'
 const Button = styled.button`
   width: 80%;
   font: inherit;
-  padding: 0.5rem 1.5rem;
+  padding: 1vh;
   border: 1px solid #8b005d;
+  border-radius : 1vh;
   color: white;
+  font-size : 2.5vh;
   background: #8b005d;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
   cursor: pointer;

@@ -1,9 +1,0 @@
-.inputField.invalid {
-    background-color: rgb(231, 130, 130);
-    border: rgb(237, 56, 56);
-}
-
-.inputField{
-    border: 1px solid black;
-    border-radius: 4px;
-}
